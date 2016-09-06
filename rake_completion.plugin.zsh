@@ -7,7 +7,6 @@
 _rake () {
   if [ -f Rakefile ]; then
     if [[ ! -f .rake_tasks || Rakefile -nt .rake_tasks ]]; then
-      echo "\nGenerating .rake_tasks..." > /dev/stderr
       rake --silent --tasks | cut -d " " -f 2 > .rake_tasks
     fi
     compadd $(cat .rake_tasks)
