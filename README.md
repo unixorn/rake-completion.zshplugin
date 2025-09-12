@@ -1,13 +1,16 @@
 # rake-completion.zshplugin
 
-A rake task tab completion plugin for zsh, suitable for use with [zgen](https://github.com/tarjoilija/zgen) and other [oh-my-zsh](http://ohmyz.sh/) compatible frameworks. It was converted from a blog post at the [Ruby on Rails](http://weblog.rubyonrails.org/2006/3/9/fast-rake-task-completion-for-zsh/) blog, but I wanted it in a zsh plugin so I could use it now that I've switched to zgen.
+A `rake` task tab completion plugin for ZSH, suitable for use with [zgenom](https://github.com/jandamm/zgenom) and other [oh-my-zsh](http://ohmyz.sh/) -compatible frameworks. It was converted from a blog post at the Ruby on Rails blog, but as a ZSH plugin it can be used more easily with the [zsh-quickstart-kit](https://github.com/unixorn/zsh-quickstart-kit).
 
-For speed, this caches the output for later usage in a .rake_tasks file in the same directory as the Rakefile. If the Rakefile is newer than .rake_tasks, it will rebuild the cache.
+For speed, this caches the output for later usage in a `.rake_tasks` file in the same directory as the `Rakefile`. When the `Rakefile` is newer than `.rake_tasks`, it will automatically rebuild the cache.
+
+You should add `.rake_tasks` to your global [.gitignore](https://help.github.com/articles/ignoring-files#global-gitignore) so your repositories don't get polluted.
 
 ## How to install
 
 ## Antigen
-Add a bundle entry to your .zshrc
+
+Add a bundle entry to your `.zshrc`
 ```bash
 antigen bundle unixorn/rake-completion.zshplugin
 ```
@@ -24,9 +27,7 @@ antigen bundle unixorn/rake-completion.zshplugin
 2. Add the plugin to your `.zpreztorc` file
 3. Open a new terminal window or tab
 
-## [zgen](https://github.com/tarjoilija/zgen)
+## [zgenom](https://github.com/jandamm/zgenom)
 
-Add a zgen load entry to your .zshrc with your other plugins:
-`zgen load unixorn/rake-completion.zshplugin`
-
-Add `.rake_tasks` to your global [.gitignore](https://help.github.com/articles/ignoring-files#global-gitignore) so your repositories don't get polluted.
+Add a `zgenom load` entry to your `.zshrc` with your other plugins:
+`zgenom load unixorn/rake-completion.zshplugin`
