@@ -1,6 +1,6 @@
 # Copyright 2014-2025 Joe Block <jpb@unixorn.net>
 #
-# This is from 
+# This is from
 #
 # http://weblog.rubyonrails.org/2006/3/9/fast-rake-task-completion-for-zsh/
 #
